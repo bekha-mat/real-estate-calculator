@@ -10,44 +10,62 @@
 
 <div class="container">
     <h2>Dubai Real Estate Investment Calculator</h2>
-    
+
     <label for="buyerType">Buyer Type:</label>
-    <select id="buyerType" onchange="toggleMortgageFields()">
+    <select id="buyerType">
         <option value="cash">Cash Buyer</option>
         <option value="mortgage">Mortgage Buyer</option>
     </select>
 
-    <div id="mortgageFields" style="display:none;">
-        <label for="downPayment">Down Payment (%):</label>
-        <input type="number" id="downPayment" placeholder="Enter down payment %">
-
-        <label for="mortgageRate">Mortgage Rate (%):</label>
-        <input type="number" id="mortgageRate" placeholder="Enter mortgage interest rate">
-
-        <label for="loanTenure">Loan Tenure (Years):</label>
-        <input type="number" id="loanTenure" placeholder="Enter loan tenure">
-    </div>
-
-    <label for="marketType">Market Type:</label>
-    <select id="marketType">
-        <option value="offplan">Off-Plan</option>
+    <label for="propertyType">Property Type:</label>
+    <select id="propertyType">
         <option value="ready">Ready</option>
+        <option value="offplan">Off-Plan</option>
     </select>
+
+    <div id="paymentPlanFields" style="display:none;">
+        <label for="paymentPlan">Payment Plan (% Upfront / % Post-Handover):</label>
+        <select id="paymentPlan">
+            <option value="40/60">40/60</option>
+            <option value="50/50">50/50</option>
+            <option value="60/40">60/40</option>
+        </select>
+    </div>
 
     <label for="propertyPrice">Property Price (AED):</label>
     <input type="number" id="propertyPrice" placeholder="Enter property price">
 
     <label for="propertySize">Property Size (sqft):</label>
-    <input type="number" id="propertySize" placeholder="Enter property size">
+    <input type="number" id="propertySize" placeholder="Enter size in sqft">
+
+    <label for="serviceCharge">Service Charge (AED per sqft):</label>
+    <input type="number" id="serviceCharge" placeholder="Enter service charge per sqft">
+
+    <div id="mortgageFields" style="display:none;">
+        <label for="downPayment">Down Payment (%):</label>
+        <input type="number" id="downPayment" placeholder="Enter down payment percentage">
+
+        <label for="mortgageRate">Mortgage Rate (%):</label>
+        <input type="number" id="mortgageRate" placeholder="Enter mortgage interest rate">
+
+        <label for="loanTenure">Loan Tenure (Years):</label>
+        <input type="number" id="loanTenure" placeholder="Enter number of years">
+    </div>
 
     <label for="rentalIncome">Annual Rental Income (AED):</label>
     <input type="number" id="rentalIncome" placeholder="Enter annual rental income">
 
-    <label for="serviceCharge">Service Charge per Sqft (AED):</label>
-    <input type="number" id="serviceCharge" placeholder="Enter service charge per sqft">
-
     <label for="appreciationRate">Expected Appreciation (% per year):</label>
     <input type="number" id="appreciationRate" placeholder="Enter expected appreciation rate">
+
+    <label for="appreciationYears">Potential Appreciation Period (Years):</label>
+    <input type="number" id="appreciationYears" placeholder="Enter number of years">
+
+    <label for="roiOrRoe">Calculation Type:</label>
+    <select id="roiOrRoe">
+        <option value="ROI">ROI</option>
+        <option value="ROE">ROE</option>
+    </select>
 
     <button onclick="calculate()">Calculate</button>
     <button onclick="exportToExcel()">Export to Excel</button>
