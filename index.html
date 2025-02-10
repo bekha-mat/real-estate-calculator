@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dubai Real Estate Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Dubai Real Estate Investment Calculator</h2>
+    
+    <label for="buyerType">Buyer Type:</label>
+    <select id="buyerType" onchange="toggleMortgageFields()">
+        <option value="cash">Cash Buyer</option>
+        <option value="mortgage">Mortgage Buyer</option>
+    </select>
+
+    <div id="mortgageFields" style="display:none;">
+        <label for="downPayment">Down Payment (%):</label>
+        <input type="number" id="downPayment" placeholder="Enter down payment %">
+
+        <label for="mortgageRate">Mortgage Rate (%):</label>
+        <input type="number" id="mortgageRate" placeholder="Enter mortgage interest rate">
+
+        <label for="loanTenure">Loan Tenure (Years):</label>
+        <input type="number" id="loanTenure" placeholder="Enter loan tenure">
+    </div>
+
+    <label for="marketType">Market Type:</label>
+    <select id="marketType">
+        <option value="offplan">Off-Plan</option>
+        <option value="ready">Ready</option>
+    </select>
+
+    <label for="propertyPrice">Property Price (AED):</label>
+    <input type="number" id="propertyPrice" placeholder="Enter property price">
+
+    <label for="propertySize">Property Size (sqft):</label>
+    <input type="number" id="propertySize" placeholder="Enter property size">
+
+    <label for="rentalIncome">Annual Rental Income (AED):</label>
+    <input type="number" id="rentalIncome" placeholder="Enter annual rental income">
+
+    <label for="serviceCharge">Service Charge per Sqft (AED):</label>
+    <input type="number" id="serviceCharge" placeholder="Enter service charge per sqft">
+
+    <label for="appreciationRate">Expected Appreciation (% per year):</label>
+    <input type="number" id="appreciationRate" placeholder="Enter expected appreciation rate">
+
+    <button onclick="calculate()">Calculate</button>
+    <button onclick="exportToExcel()">Export to Excel</button>
+
+    <h3>Results:</h3>
+    <table id="resultsTable">
+        <thead>
+            <tr>
+                <th>Metric</th>
+                <th>Value</th>
+            </tr>
+        </thead>
+        <tbody id="resultsBody"></tbody>
+    </table>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
