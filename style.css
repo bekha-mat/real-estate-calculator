@@ -1,65 +1,52 @@
-/* style.css */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f8f9fa;
 }
 
 .container {
-    width: 50%;
-    margin: 20px auto;
+    max-width: 600px;
+    margin: auto;
     background: white;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-h2, h3 {
-    text-align: center;
-}
-
-label {
-    font-weight: bold;
+label, input, select, button {
     display: block;
-    margin-top: 10px;
-}
-
-input, select, button {
+    margin: 10px 0;
     width: 100%;
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
 }
 
-button {
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-top: 15px;
-}
-
-button:hover {
-    background-color: #0056b3;
-}
-
-#resultsTable {
+table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
+    margin-top: 20px;
 }
 
-#resultsTable th, #resultsTable td {
-    border: 1px solid #ddd;
-    padding: 10px;
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
     text-align: left;
 }
 
-#resultsTable th {
-    background-color: #007BFF;
+th {
+    background-color: #f4f4f4;
+}
+
+button {
+    background-color: #28a745;
     color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #218838;
 }
 
 .green {
